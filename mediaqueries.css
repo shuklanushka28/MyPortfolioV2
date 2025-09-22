@@ -6,3 +6,32 @@
     display: flex;
 }
 }
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  #projects .about-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #projects .details-container {
+    width: 80%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  #projects .details-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hover-description {
+    width: 95%;
+    font-size: 13px;
+  }
+}

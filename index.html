@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+     <div class="container">
     <nav id="desktop-nav">
       <div class="logo">Anushka Shukla</div>
       <div>
@@ -43,7 +44,10 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Anushka Shukla</h1>
-        <p class="section__text__p2">Data Analyist</p>
+        <p class="section__text__p2">
+  <span id="role-text"></span>
+</p>
+
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -67,6 +71,12 @@
             class="icon"
             onclick="location.href='https://github.com/shuklanushka28'"
           />
+          <img
+            src="Tableau.png"
+            alt="My Tableau profile"
+            class="icon"
+            onclick="location.href='https://public.tableau.com/app/profile/anushka.shukla5664/vizzes'"
+          />
         </div>
       </div>
     </section>
@@ -83,35 +93,30 @@
         </div>
         <div class="about-details-container">
           <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Data Analyist</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />B.tech</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              As an aspiring data analyst with a solid foundation in statistical analysis and data manipulation,
-              My expertise lies in extracting, cleaning, and interpreting complex datasets to provide actionable insights that support strategic decision-making.
-              I'm skilled in using tools like SQL, Python, and Tableau to visualize data effectively and communicate findings to stakeholders. 
-              I'm passionate about leveraging data to drive business growth and optimize processes, and I'm excited about the opportunity to contribute my skills to your team.
-            </p>
-          </div>
-        </div>
-      </div>
+  <div class="details-container edu-card hidden">
+    <img src="education.png" alt="Education icon" class="icon" />
+
+    <!-- First cover (always visible) -->
+    <h3 class="edu-title">B.Tech</h3>
+
+    <!-- Hidden details that animate in -->
+    <div class="edu-details hidden-detail">
+      <p>SRM Institute of Science and Technology • 2021 – 2025</p>
+      <p><strong>Specialization:</strong> Big Data Analytics</p>
+    </div>
+  </div>
+</div>
+<div class="text-container about-pitch hidden">
+  <p>
+    I am a passionate <strong>Data Analyst</strong> with expertise in
+    <strong>Python, SQL, Tableau, and Machine Learning</strong>.  
+    I thrive on transforming raw datasets into actionable insights that drive
+    smarter decisions. With a background in <strong>B.Tech in CS</strong>,
+    I combine technical skills with problem-solving ability and a keen eye for
+    detail to deliver value through data.
+  </p>
+</div>
+
       <img
         src="arrow.png"
         alt="Arrow icon"
@@ -259,14 +264,19 @@
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">COVID-19 Analysis</h2>
+            
+            <div class="project-hover-wrapper">
+  <div class="project-card-modern">
+    <img src="project-1.png" alt="Project 1" class="project-img" />
+  </div>
+  <div class="hover-description">
+    This SQL project analyzes global COVID-19 data from January 28, 2020, to August 30, 2021.
+    exploring trends in cases, deaths, and vaccinations. It highlights the pandemic's progression, regional disparities, and the impact of vaccinations. 
+    Insights aim to support public health strategies and effective decision-making.
+  </div>
+</div>
+<h2 class="project-title">COVID-19 Analysis
+</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -283,15 +293,20 @@
             </div>
           </div>
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Alcohol Inventory Optimization</h2>
-            <div class="btn-container">
+            <div class="project-hover-wrapper">
+  <div class="project-card-modern">
+    <img src="project-2.png" alt="Project 2" class="project-img" />
+  </div>
+  <div class="hover-description">
+  Hotels and bars often face challenges in maintaining optimal alcohol inventory. Too much stock leads to wastage and high storage costs
+  (especially for perishable or expensive liquor), while too little results in stockouts and missed sales. The goal of this project is to predict
+  consumption trends and optimize reorder decisions to ensure the right inventory levels are maintained — minimizing waste, cutting costs,
+  and improving customer satisfaction
+  </div>
+  <h2 class="project-title">Alcohol Inventory Optimization
+  </h2>
+</div>
+      <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/shuklanushka28/Alcohol_inventory_optimization/'"
@@ -307,14 +322,16 @@
             </div>
           </div>
           <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Coffee Sales Analysis</h2>
+            <div class="project-hover-wrapper">
+  <div class="project-card-modern">
+    <img src="project-3.png" alt="Project 3" class="project-img" />
+  </div>
+  <div class="hover-description">
+    The dashboard aims to provide a comprehensive overview of sales performance, highlighting key metrics such as total sales, top-performing customers, and geographic trends. 
+    By integrating data from orders, customers, and products, the dashboard offers actionable insights to drive decision-making, enhance customer engagement, and optimize business strategies for sustained growth.
+  </div>
+  <h2 class="project-title">Coffee Sales Analysis</h2>
+</div>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
@@ -339,6 +356,56 @@
         onclick="location.href='./#contact'"
       />
     </section>
+    </section> <!-- end of Projects -->
+
+<section id="certificates">
+  <p class="section__text__p1">My Credentials</p>
+  <h1 class="title">Certificates</h1>
+  <div class="about-containers">
+
+    <!-- Coursera -->
+    <div class="details-container">
+      <h3>Introduction to Business Analytics</h3>
+      <p>Issued by: Tableau</p>
+      <p>Issued On: August 16, 2025</p>
+      <button class="btn btn-color-2"
+        onclick="window.open('https://www.coursera.org/account/accomplishments/verify/ASFA956V55NL')">
+        View Credential
+      </button>
+    </div>
+
+    <!-- Udemy -->
+    <div class="details-container">
+      <h3>Udemy Certificate</h3>
+      <p>Issued by: Udemy</p>
+      <p>Issued On: March 16,2025</p>
+      <button class="btn btn-color-2"
+        onclick="window.open('https://www.udemy.com/certificate/UC-affb41f1-1e10-4162-8bef-84eb11011719/')">
+        View Credential
+      </button>
+    </div>
+
+    <!-- Oracle -->
+    <div class="details-container">
+      <h3>Oracle Database Cloud Administrator Certified Professional</h3>
+      <p>Issued by: Oracle</p>
+      <p>Issued On: September 2025</p>
+      <button class="btn btn-color-2"
+        onclick="window.open('https://catalog-education.oracle.com/pls/certview/sharebadge?id=44DB181CF6FFBAE43B5B75C8414A5D3F7A25C6B07986FEBCAD1BB61D35012E37')">
+        View Credential
+      </button>
+    </div>
+
+  </div>
+  <img
+    src="arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="location.href='./#contact'"
+  />
+</section>
+
+
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -362,18 +429,9 @@
       </div>
     </section>
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 Anushka Shukla. All Rights Reserved.</p>
+      <p>Copyright &#169; 2025 Anushka Shukla. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    </div>
   </body>
 </html>
